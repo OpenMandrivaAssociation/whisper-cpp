@@ -24,6 +24,7 @@ Source0:        %{url}/archive/refs/tags/v%{version}/whisper.cpp-%{version}.tar.
 
 %global sover %{version}
 
+BuildRequires:	make
 BuildRequires:  cmake
 BuildRequires:  git
 
