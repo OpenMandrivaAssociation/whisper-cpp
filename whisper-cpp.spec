@@ -1,3 +1,10 @@
+%ifarch x86_64
+# Workaround for clang 21.1.x hanging at -Os
+%global optflags %{optflags} -O3
+%endif
+
+
+
 Summary:        Port of OpenAI's Whisper model in C/C++
 Name:           whisper-cpp
 License:        MIT
