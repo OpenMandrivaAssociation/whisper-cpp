@@ -38,6 +38,17 @@ BuildRequires:  rocblas-devel
 BuildRequires:  rocm-rpm-macros
 %endif
 
+# for blas backend
+BuildRequires:  pkgconfig(openblas)
+# for vulkan backend
+BuildRequires:  pkgconfig(vulkan)
+BuildRequires:  glslang-devel
+BuildRequires:  glslang
+BuildRequires:  pkgconfig(shaderc)
+BuildRequires:  glslc
+BuildRequires:	pkgconfig(OpenCL-Headers)
+BuildRequires:	pkgconfig(OpenCL)
+
 %description
 High-performance inference of OpenAI's Whisper automatic speech
 recognition (ASR) model:
