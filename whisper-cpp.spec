@@ -3,8 +3,6 @@
 %global optflags %{optflags} -O3
 %endif
 
-
-
 Summary:        Port of OpenAI's Whisper model in C/C++
 Name:           whisper-cpp
 License:        MIT
@@ -188,7 +186,3 @@ find %{buildroot} -name 'whisper.pc' -delete
 %if %{with rocm}
 %{_libdir}/libggml-hip.so
 %endif
-
-%changelog
-%autochangelog
-
