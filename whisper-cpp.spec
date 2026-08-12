@@ -25,7 +25,7 @@
 Summary:		Speech recognition in C/C++ (whisper.cpp)
 Name:			whisper-cpp
 Version:		1.9.2
-Release:		1
+Release:		2
 License:		MIT
 Group:			Sciences/Other
 URL:			https://github.com/ggml-org/whisper.cpp
@@ -109,6 +109,7 @@ Requires:	%{name}%{?_isa} = %{EVRD}
 Summary:	HTTP inference server for %{name}
 Group:		Servers
 Requires:	%{name}%{?_isa} = %{EVRD}
+Recommends:	whisper-cpp-model-tiny
 Recommends:	ffmpeg
 
 %description server
@@ -154,6 +155,7 @@ without a reverse proxy. --convert shells out to ffmpeg.
 Summary:	CLI tools and helpers for %{name}
 Group:		Sciences/Other
 Requires:	%{name}%{?_isa} = %{EVRD}
+Recommends:	whisper-cpp-model-tiny
 Recommends:	curl
 
 %description examples
