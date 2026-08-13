@@ -25,7 +25,7 @@
 Summary:		Speech recognition in C/C++ (whisper.cpp)
 Name:			whisper-cpp
 Version:		1.9.2
-Release:		2
+Release:		3
 License:		MIT
 Group:			Sciences/Other
 URL:			https://github.com/ggml-org/whisper.cpp
