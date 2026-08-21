@@ -24,8 +24,8 @@
 
 Summary:		Speech recognition in C/C++ (whisper.cpp)
 Name:			whisper-cpp
-Version:		1.9.2
-Release:		4
+Version:		1.9.3
+Release:		1
 License:		MIT
 Group:			Sciences/Other
 URL:			https://github.com/ggml-org/whisper.cpp
@@ -66,7 +66,8 @@ BuildOption:	-DWHISPER_BUILD_SERVER=%{build_examples}
 BuildOption:	-DWHISPER_BUILD_TESTS=%{build_test}
 # SDL2 pulls in talk-llama, which vendors a full llama.cpp tree.
 BuildOption:	-DWHISPER_SDL2:BOOL=OFF
-# Option exists but is not wired up in 1.9.2 (no libcurl usage).
+# Model download in-process. Left off: the packaged download scripts
+# already use curl/wget, and ABF has no need to fetch at build time.
 BuildOption:	-DWHISPER_CURL:BOOL=OFF
 %if %{with examples}
 BuildOption:	-DWHISPER_COMMON_FFMPEG:BOOL=ON
