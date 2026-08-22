@@ -25,7 +25,7 @@
 Summary:		Speech recognition in C/C++ (whisper.cpp)
 Name:			whisper-cpp
 Version:		1.9.3
-Release:		1
+Release:		2
 License:		MIT
 Group:			Sciences/Other
 URL:			https://github.com/ggml-org/whisper.cpp
@@ -34,7 +34,7 @@ Source0:		https://github.com/ggml-org/whisper.cpp/archive/refs/tags/v%{version}/
 # Prefer -O3 over distro -Os for the inference hot path
 %global optflags %{optflags} -O3
 
-BuildRequires:	cmake(ggml) >= 0.20.0
+BuildRequires:	cmake(ggml) >= 0.21.0
 BuildRequires:	git-core
 %if %{with examples}
 # WHISPER_COMMON_FFMPEG: decode mp3/flac/… in the CLI (not just wav)
@@ -44,7 +44,7 @@ BuildRequires:	pkgconfig(libavutil)
 BuildRequires:	pkgconfig(libswresample)
 %endif
 
-Requires:	%{mklibname ggml}%{?_isa} >= 0.20.0
+Requires:	%{mklibname ggml}%{?_isa} >= 0.21.0
 # Runtime backends are dlopen'd from ggml; recommend the useful ones.
 Recommends:	ggml-backend-blas%{?_isa}
 Recommends:	ggml-backend-vulkan%{?_isa}
